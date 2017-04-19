@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  font-size: 40px;
+}
+
+.nav.nav-tabs.wapper {
+  align-items: center;
+}
+
+.address {
+  text-align: right;
+}
