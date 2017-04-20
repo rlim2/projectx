@@ -1,0 +1,67 @@
+- var currentPage = 'members';
+html
+  head
+    link(rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(href="css/main.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="node_modules/jquery/dist/jquery.min.js")
+    script(src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript")
+    title Optical and Ultrasonic Imaging Laboratory
+    link(rel="icon" type="image/png" href="img/tabUB.png")
+  body
+    include ./includes/_header.pug
+    .main
+      .wrapper
+        .row
+          .col-md-12.col-sm-12
+            img.center-block.profilePic(src="img/team/JunXIA.jpg" alt="Nada") 
+            h1.text-uppercase.text-center Dr. Jun Xia
+            p.text-center Dr. Xia received his undergraduate training from the Physics Department at the University of Science and Technology of China from 1999 to 2004. He then moved to the University of Toronto and completed his Ph.D. training in 2010 with Dr. Andreas Mandelis on photothermal imaging. In the same year, he joined Dr. Lihong V. Wang's lab at Washington University in St. Louis as a postdoctoral fellow. There, he concentrated on photoacoustic tomography and invented ring-shaped confocal photoacoustic computed tomography (RC-PACT), a small-animal imaging system that provides high-resolution whole-body images of mice. Dr. Xia has published three book chapters and more than thirty papers in peer-reviewed journals. Dr. Xia is now an Assistant Professor at the State University of New York at Buffalo (University at Buffalo). 
+            p.text-center External Page: Dr. Xia's Google Scholar
+            p.text-center Contact#[br]Email: junxia@buffalo.edu#[br]Tel: (716) 645-8628 
+          
+          .col-md-12.col-sm-12
+            h1.text-center Ph.D Students
+          .col-md-4.col-sm-12
+            img.center-block.profilePic(src="img/team/DepengWANG.jpg" alt="Nada") 
+            h1.text-uppercase.text-center Depeng Wang
+            p.text-center Depeng Wang is a Ph.D. candidate (starting in Spring 2015) in the Biomedical Engineering Department. He received his Bachelor Degree in Aircraft Power Engineering from Nanjing University of Aeronautics and Astronautics in 2012. He was then recommended to continue pursuing his Master degree in Dynamic Engineering at the same university. Depeng obtained his Master degree in 2015 and now uses his engineering skills on photoacoustic tomography research. 
+            p.text-center depengwa@buffalo.edu
+          .col-md-4.col-sm-12
+            img.center-block.profilePic(src="img/team/YuehangWANG.png" alt="Nada") 
+            h1.text-uppercase.text-center Yuehang Wang
+            p.text-center Yuehang Wang comes from China and he is a graduate student in Biomedical Engineering. He received a B.S. in Biomedical Engineering in 2013, after that he worked in Beijing for one year. He is interested in functional and molecular imaging with photoacoustic tomography. Yuehang was a Master student at the University at Buffalo, Biomedical Engineering and decided to transition into the PhD program on August 2015. 
+            p.text-center yuehangw@buffalo.edu
+          .col-md-4.col-sm-12.text-center
+            img.center-block.profilePic(src="img/team/YeZHAN.jpg" alt="Nada") 
+            h1.text-uppercase Ye Zhan
+            p Ye Zhan received his undergraduate training from the Department of Mechanical Engineering at Harbin University of Sci & Tech (2014). In 2016, he finished his master study in the department of MEMS from University of Pittsburgh. He has strong interests in photoacoustic imaging. In the summer of 2016, he joined Dr. Xia’s group for Ph.D. study. 
+            p yezhan@buffalo.edu
+            
+          .col-md-12.col-sm-12
+            h1.text-center Research Assistant
+          .col-md-12.col-sm-12
+            img.center-block.profilePic(src="img/team/RachelLim.jpg" alt="Nada") 
+            h1.text-uppercase.text-center Rachel Lim
+            p.text-center Rachel Lim graduated in June 2016 with a double degree in Biomedical Engineering and Economics from the University at Buffalo. She assists Dr. Xia and his PhD students with various projects related to ultrasound and photoacoustic imaging. 
+            p.text-center rlim2@buffalo.edu
+              
+          .col-md-12.col-sm-12
+            h1.text-center Masters Students
+          .col-md-12.col-sm-12
+            h3.text-center Hongying Wan
+            p.text-center (Graduated in 2016) 
+            
+          .col-md-12.col-sm-12
+            h1.text-center Undergraduate Students
+          .col-md-6.col-sm-12.h3.text-center Tri Vu
+          .col-md-6.col-sm-12.h3.text-center Meagan Branch
+          .col-md-6.col-sm-12.h3.text-center Ryan Hubble
+            p.text-center (Graduated in 2016) 
+          .col-md-6.col-sm-12.h3.text-center Andrey Svintozelsky
+            p.text-center (Graduated in 2016)       
+              
+    include ./includes/_footer.pug
+    script(src="js/main.js")
