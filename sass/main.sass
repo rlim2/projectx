@@ -1,18 +1,58 @@
-// output: main.css
+$ub-blue: #005bbb
 
 *
   box-sizing: border-box
 
 .wrapper
-  width: 960px
+  max-width: 960px
   margin: 0 auto
 
-.page-header
+header, footer
+  background: $ub-blue
+  color: white
+
+header
+  height: 60px
+.page-title
   text-align: center
   font-size: 40px
+  margin: 40px 0 40px 0
 
-.nav.nav-tabs.wapper
-  align-items: center
+.main
+  .wrapper
+    padding: 80px 0
 
-.address
-  text-align: right
+.nav.nav-tabs
+  display: flex
+  justify-content: center
+  width: auto
+  font-size: 20px
+  li a
+    &:hover, &.active
+      background: $ub-blue
+      color: white
+
+#mycarousel
+  position: relative
+  img
+    width: 100vw
+    height: 60vh
+  #prev, #next
+    position: absolute
+    top: 42.5%
+  #prev
+    left: -10px
+    &:active i
+      transform: translateX(-2px)
+  #next
+    right: -10px
+    &:active i
+      transform: translateX(2px)
+  i.material-icons
+    font-size: 10rem
+    color: white
+
+footer
+  height: auto
+  .wrapper
+    padding: 50px 0 30px 0
