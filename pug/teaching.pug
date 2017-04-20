@@ -1,0 +1,31 @@
+- var currentPage = 'teaching';
+html
+  head
+    link(rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(href="css/main.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="node_modules/jquery/dist/jquery.min.js")
+    script(src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript")
+    title Optical and Ultrasonic Imaging Laboratory
+    link(rel="icon" type="image/png" href="img/tabUB.png")
+  body
+    include ./includes/_header.pug
+    .main
+      .wrapper
+        .row
+          .col-md-6.col-sm-12
+            img.mini(src="img/battery2.png" alt="Nada") 
+            h3.text-uppercase BE307 
+            h1.text-uppercase Biomedical Ciruits and Signals
+            p.text-justify Designed for Biomedical Engineering juniors. Explores fundamental knowledge of biological signals and the circuitry and software used to acquire, analyze, and process these circuits and signals. Reviews basic properties of signals and systems, develops an in-depth knowledge of electronic circuit design, and exposes students to problem-oriented design with special emphasis on problems particular to biomedical applications, and integrates the physiological concepts with electronic design to prepare the students for solving problems in any area of biomedical engineering. Teaches LabView, a graphical programming tool for virtual instrumentation. Students will develop skills to analyze, design, and build both real and virtual instruments for biomedical research applications and prototyping of medical devices.
+          .col-md-6.col-sm-12  
+            img.mini(src="img/battery3.png" alt="Nada") 
+            h3.text-uppercase BE422/BE522 
+            h1.text-uppercase Introduction to Biomedical Optics and Ultrasound
+            p.text-justify This course is designed for Biomedical Engineering seniors and graduate students. This course content covers the fundamentals of biomedical optics and ultrasound and their applications in medical imaging and therapy. The first half of the course covers the fundamentals of optics such as the various miscrocopy available, Diffuse Optical Tomoragphy (DOT), laser classification and its safety hazards. While, the second half, exposes the students to the ultrasound's components and its features. Ranging from the transmission capacity to the ways to improve imaging resolution and reconstruction in photoacoustic tomography.
+    include ./includes/_footer.pug
+    script(src="js/main.js")
+      
+      

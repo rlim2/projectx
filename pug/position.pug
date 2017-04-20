@@ -1,0 +1,27 @@
+- var currentPage = 'position';
+html
+  head
+    link(rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(href="css/main.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="node_modules/jquery/dist/jquery.min.js")
+    script(src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript")
+    title Optical and Ultrasonic Imaging Laboratory
+    link(rel="icon" type="image/png" href="img/tabUB.png")
+  body
+    include ./includes/_header.pug
+    .main
+      .wrapper
+        .row
+          .col-md-12.col-sm-12
+            img.mini(src="img/certificate.png" alt="Nada") 
+            h1.text-uppercase Predoctoral Positions
+            p.text-justify Predoctoral research assistant positions are available at Dr. Xia's Lab. Applicants who majored in Biomedical Engineering, Applied Physics, Optics, Mechanical Engineering, or a related engineering field are encouraged apply. Preferences will be given to candidates with background in optics, ultrasonics or imaging. 
+            p.text-justify Interested students may email curriculum vitae to Dr. Xia at junxia@buffalo.edu.
+          
+    include ./includes/_footer.pug
+    script(src="js/main.js")
+      
+      
