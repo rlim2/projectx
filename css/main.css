@@ -55,12 +55,12 @@ header {
     color: white; }
 
 .center-block {
-  max-width: 100px;
+  max-width: 200px;
   padding: 10px; }
 
 .profilePic {
   border-radius: 50%;
-    border-radius-width: 500px; }
+    border-radius-max-width: 200px; }
 
 footer {
   height: auto; }
