@@ -1,11 +1,23 @@
 $ub-blue: #005bbb
+$lightgrey: #dddddd
+$bp-medium: 768px
+$bp-xlarge: 1010px
+
+html
+  font-size: 16px
 
 *
   box-sizing: border-box
 
+h2, h3, h4, h5, h6
+  font-family: 'Georgia', serif
+  font-weight: 600
+  color: $ub-blue
+
 .wrapper
   max-width: 960px
   margin: 0 auto
+  padding: 0 20px
 
 header, footer
   background: $ub-blue
@@ -24,7 +36,8 @@ header
 
 .main
   .wrapper
-    padding: 80px 0
+    padding-top: 35px
+    padding-bottom: 80px
   .row
     padding: 50px 0
     &:first-child
@@ -34,17 +47,18 @@ header
     float: none
     // width: 70%
 
-
-
 .nav.nav-tabs
   display: flex
+  flex-direction: column
   justify-content: center
   width: auto
-  font-size: 20px
+  font-size: 1rem
   li a
     &:hover, &.active
       background: $ub-blue
       color: white
+  @media screen and (min-width: $bp-medium)
+    flex-direction: row
 
 #mycarousel
   position: relative
@@ -80,6 +94,19 @@ header
   width: 30px
   height: 30px
 
+#research
+  article
+    .content
+      border: 1px solid $lightgrey
+      padding: 20px
+#sidebar
+  width: 250px
+  &.affix
+    top: 10px
+
+.research
+  max-width: 100%
+
 .section-title
   display: flex
   align-items: center
@@ -104,9 +131,16 @@ ol
 footer
   height: auto
   .wrapper
-    padding: 50px 0 30px 0
+    padding-top: 50px
+    padding-bottom: 30px
     .footerLogo
-      height: 80px
+      height: 45px
   address
-    margin-top: 25px
-    margin-left: 68px
+    margin-top: 10px
+    margin-left: 40px
+  @media screen and (min-width: $bp-medium)
+    .wrapper .footerLogo
+      height: 80px
+    address
+      margin-top: 25px
+      margin-left: 68px

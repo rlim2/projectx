@@ -1,0 +1,45 @@
+- var currentPage = 'research';
+html
+  head
+    link(rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css")
+    link(href="css/main.css" rel="stylesheet")
+    link(href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet")
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    script(src="node_modules/jquery/dist/jquery.min.js")
+    script(src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript")
+    title Optical and Ultrasonic Imaging Laboratory
+    link(rel="icon" type="image/png" href="img/tabUB.png")
+  body
+    include ./includes/_header.pug
+    .main#research
+      .wrapper
+        .row
+          .col-md-9.col-sm-12
+            article.row#article1
+              h3 Deep Tissue Photoacoustic Computed Tomography with a Fast and Compact Laser System
+              .content
+                img.research(src="img/research/r10_img.png")
+                p.text-justify Photoacoustic computed tomography (PACT) holds great promise for biomedical imaging, but wide-spread implementation is impeded by the bulkiness of flash-lamp-pumped laser systems, which typically weigh between 50 - 200 kg, require continuous water cooling, and operate at a low repetition rate. Here, we demonstrate that compact lasers based on emerging diode technologies are well-suited for preclinical and clinical PACT. The diode-pumped laser used in this study had a miniature footprint (13×14×7cm#[sup 3]), weighed only 1.6 kg, and outputted up to 80 mJ per pulse at 1064 nm. In vitro, the laser system readily provided over 4 cm PACT depth in chicken breast tissue. In vivo, in addition to high resolution, non-invasive brain imaging in living mice, the system can operate at 50 Hz, which enabled high-speed cross-sectional imaging of murine cardiac and respiratory function. The system also provided high quality, high-frame rate, and non-invasive three-dimensional mapping of arm, palm, and breast vasculature at multi centimeter depths in living human subjects, demonstrating the clinical viability of compact lasers for PACT. 
+                
+                p.text-justify Depeng Wang, Yuehang Wang, Weiran Wang, Dandan Luo, Upendra Chitgupi, Jumin Geng, Yang Zhou, Lidai Wang, Jonathan F Lovell, and Jun Xia, "Deep tissue photoacoustic computed tomography with a fast and compact laser system," Biomed. Opt. Express 8, 112-123 (2017)
+
+                p https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-8-1-112&id=355877
+            
+            article.row#article2
+              h3 Coherent-Weighted 3D Image Reconstruction in Linear-array-based Photoacoustic Tomography
+              .content
+                img.research(src="img/research/r9_img.png")
+                p.text-justify While the majority of photoacoustic imaging systems used custom-made transducer arrays, commercially-available linear transducer arrays hold the benefits of affordable price, handheld convenience and wide clinical recognition. They are not widely used in photoacoustic imaging primarily because of the poor elevation resolution. Here, without modifying the imaging geometry and system, we propose addressing this limitation purely through image reconstruction. Our approach is based on the integration of two advanced image reconstruction techniques: focal-line-based three-dimensional image reconstruction and coherent weighting. We first numerically validated our approach through simulation and then experimentally tested it in phantom and in vivo. Both simulation and experimental results proved that the method can significantly improve the elevation resolution (up to 4 times in our experiment) and enhance object contrast.
+                p Depeng Wang, Yuehang Wang, Yang Zhou, Jonathan F. Lovell, Jun Xia (2016). Coherent-weighted three-dimensional image reconstruction in linear-array-based photoacoustic tomography. Biomedical Optics Express, 7(5), 1957-1965
+
+                p https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-7-5-1957 
+          .col-md-3.col-sm-12
+            #sidebar(data-spy="affix")
+              ul.sticky
+                li: a(href="#article1") Deep Tissue Photoacoustic Computed Tomography with a Fast and Compact Laser System
+                li: a(href="#article2") Coherent-Weighted 3D Image Reconstruction in Linear-array-based Photoacoustic Tomography
+    include ./includes/_footer.pug
+    script(src="js/main.js")
+      
+      
