@@ -71,6 +71,31 @@ header {
   max-width: 200px;
   border-radius: 50%; }
 
+.title-icon {
+  width: 30px;
+  height: 30px; }
+
+.section-title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px; }
+  .section-title h2 {
+    margin: 0;
+    margin-left: 10px; }
+
+ol {
+  transform: rotate(180deg);
+  margin-left: 20px; }
+  ol li {
+    margin: 5px 0;
+    transform: rotate(-180deg); }
+    ol li a {
+      text-decoration: none;
+      border-bottom: 1px solid; }
+      ol li a:hover {
+        text-decoration: none;
+        border-bottom: 2px; }
+
 footer {
   height: auto; }
   footer .wrapper {
