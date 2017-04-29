@@ -1,4 +1,5 @@
 - var currentPage = 'research';
+<!DOCTYPE html>
 html
   head
     link(rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css")
@@ -10,7 +11,7 @@ html
     script(src="node_modules/bootstrap/dist/js/bootstrap.min.js" type="text/javascript")
     title Optical and Ultrasonic Imaging Laboratory
     link(rel="icon" type="image/png" href="img/tabUB.png")
-  body
+  body(data-spy="scroll" data-target="#sidebar" data-offset="200")
     include ./includes/_header.pug
     .main#research
       .wrapper
@@ -21,7 +22,7 @@ html
               .content
                 img.research(src="img/research/r10_img.png")
                 p.text-justify Photoacoustic computed tomography (PACT) holds great promise for biomedical imaging, but wide-spread implementation is impeded by the bulkiness of flash-lamp-pumped laser systems, which typically weigh between 50 - 200 kg, require continuous water cooling, and operate at a low repetition rate. Here, we demonstrate that compact lasers based on emerging diode technologies are well-suited for preclinical and clinical PACT. The diode-pumped laser used in this study had a miniature footprint (13×14×7cm#[sup 3]), weighed only 1.6 kg, and outputted up to 80 mJ per pulse at 1064 nm. In vitro, the laser system readily provided over 4 cm PACT depth in chicken breast tissue. In vivo, in addition to high resolution, non-invasive brain imaging in living mice, the system can operate at 50 Hz, which enabled high-speed cross-sectional imaging of murine cardiac and respiratory function. The system also provided high quality, high-frame rate, and non-invasive three-dimensional mapping of arm, palm, and breast vasculature at multi centimeter depths in living human subjects, demonstrating the clinical viability of compact lasers for PACT. 
-                p Depeng Wang, Yuehang Wang, Weiran Wang, Dandan Luo, Upendra Chitgupi, Jumin Geng, Yang Zhou, Lidai Wang, Jonathan F Lovell, and Jun Xia, #[a(href="https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-8-1-112&id=355877") Deep tissue photoacoustic computed tomography with a fast and compact laser system], Biomed. Opt. Express 8, 112-123 (2017)
+                p #[a(href="https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-8-1-112&id=355877") Depeng Wang, Yuehang Wang, Weiran Wang, Dandan Luo, Upendra Chitgupi, Jumin Geng, Yang Zhou, Lidai Wang, Jonathan F Lovell, and Jun Xia, Deep tissue photoacoustic computed tomography with a fast and compact laser system, Biomed. Opt. Express 8, 112-123 (2017)]
             
             article.row#article9
               h3 Coherent-Weighted 3D Image Reconstruction in Linear-array-based Photoacoustic Tomography
@@ -104,8 +105,8 @@ html
                                                                 
           .col-md-3.col-sm-12
             #sidebar(data-spy="affix")
-              ul.sticky
-                li: a(href="#article10") Deep Tissue Photoacoustic Computed Tomography with a Fast and Compact Laser System
+              ul.sticky.nav.navbar-nav
+                li#elevator-button.active: a(href="#article10") Deep Tissue Photoacoustic Computed Tomography with a Fast and Compact Laser System
                 li: a(href="#article9") Coherent-Weighted 3D Image Reconstruction in Linear-array-based Photoacoustic Tomography
                 li: a(href="#article8") A Phosphorus Phthalocyanine Formulation with Intense Absorbance at 1000nm for Deep Optical Imaging
                 li: a(href="#article7") Slit-enabled Linear-array PAT with Near Isotropic Spatial Resolution in Three Dimension
@@ -117,8 +118,8 @@ html
                 li: a(href="#article1") Combined PAT and High Intensity Focused Ultrasound Imaging for Flow Measurement 
                 li: a(href="#articleFund") Research Funding
                 
-                
     include ./includes/_footer.pug
     script(src="js/main.js")
+    script(src="js/research.js")
       
       

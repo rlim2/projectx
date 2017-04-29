@@ -1,13 +1,29 @@
+body {
+  position: relative;
+  height: 100%; }
+
 html {
   font-size: 16px; }
 
 * {
   box-sizing: border-box; }
 
+a {
+  text-decoration: none;
+  border-bottom: 1px solid; }
+  a:hover {
+    text-decoration: none;
+    border-bottom: 2px solid; }
+
 h2, h3, h4, h5, h6 {
   font-family: 'Georgia', serif;
   font-weight: 600;
   color: #005bbb; }
+
+h2.name, h3.name {
+  color: black;
+  font-family: 'Arial', sans-serif;
+  font-weight: normal; }
 
 .wrapper {
   max-width: 960px;
@@ -44,6 +60,44 @@ header {
   margin: 0 auto;
   float: none; }
 
+#hamburger {
+  width: 30px;
+  height: 23px;
+  position: relative;
+  right: 0;
+  cursor: pointer; }
+  #hamburger span {
+    display: block;
+    position: absolute;
+    height: 5px;
+    width: 100%;
+    background: #666666;
+    border-radius: 5px;
+    opacity: 1;
+    left: 0;
+    transition: .25s ease-in-out; }
+    #hamburger span:nth-child(1) {
+      top: 0; }
+    #hamburger span:nth-child(2), #hamburger span:nth-child(3) {
+      top: 9px; }
+    #hamburger span:nth-child(4) {
+      bottom: 0; }
+  #hamburger.open span:nth-child(1) {
+    top: 9px;
+    width: 0;
+    left: 50%; }
+  #hamburger.open span:nth-child(2) {
+    transform: rotate(45deg); }
+  #hamburger.open span:nth-child(3) {
+    transform: rotate(-45deg); }
+  #hamburger.open span:nth-child(4) {
+    bottom: 9px;
+    width: 0;
+    left: 50%; }
+  @media screen and (min-width: 768px) {
+    #hamburger {
+      display: none; } }
+
 .nav.nav-tabs {
   display: flex;
   flex-direction: column;
@@ -64,7 +118,10 @@ header {
     height: 60vh; }
   #mycarousel #prev, #mycarousel #next {
     position: absolute;
-    top: 42.5%; }
+    top: 42.5%;
+    border-bottom: none; }
+    #mycarousel #prev:hover, #mycarousel #next:hover {
+      border-bottom: none; }
   #mycarousel #prev {
     left: -10px; }
     #mycarousel #prev:active i {
@@ -78,7 +135,7 @@ header {
     color: white; }
 
 .center-block {
-  max-width: 150px;
+  max-width: 120px;
   padding: 10px; }
 
 .profilePic {
@@ -94,9 +151,35 @@ header {
   padding: 20px; }
 
 #sidebar {
-  width: 250px; }
-  #sidebar.affix {
-    top: 10px; }
+  display: none; }
+  @media screen and (min-width: 768px) {
+    #sidebar {
+      display: block;
+      width: 250px;
+      background: white;
+      margin-left: 30px; }
+      #sidebar.affix {
+        top: 10px; }
+      #sidebar .nav li {
+        margin: 1px 0 1px 0;
+        border-left: 3px solid white; }
+        #sidebar .nav li a {
+          color: #666666;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          border-bottom: none; }
+        #sidebar .nav li:hover {
+          border-bottom: none;
+          border-left: 3px solid #005bbb; }
+          #sidebar .nav li:hover a {
+            color: #005bbb;
+            background: none;
+            font-weight: 600; }
+        #sidebar .nav li.active {
+          border-left: 3px solid #005bbb; }
+          #sidebar .nav li.active a {
+            color: #005bbb;
+            font-weight: 600; } }
 
 .research {
   max-width: 100%; }
@@ -115,26 +198,34 @@ ol {
   ol li {
     margin: 5px 0;
     transform: rotate(-180deg); }
-    ol li a {
-      text-decoration: none;
-      border-bottom: 1px solid; }
-      ol li a:hover {
-        text-decoration: none;
-        border-bottom: 2px; }
 
 footer {
   height: auto; }
   footer .wrapper {
     padding-top: 50px;
     padding-bottom: 30px; }
-    footer .wrapper .footerLogo {
+    footer .wrapper .footerLogo a {
+      border-bottom: none; }
+      footer .wrapper .footerLogo a:hover {
+        border-bottom: none; }
+    footer .wrapper .footerLogo img {
       height: 45px; }
   footer address {
     margin-top: 10px;
     margin-left: 40px; }
   @media screen and (min-width: 768px) {
-    footer .wrapper .footerLogo {
+    footer .wrapper .footerLogo img {
       height: 80px; }
     footer address {
       margin-top: 25px;
       margin-left: 68px; } }
+  footer .legal {
+    text-align: right;
+    font-size: 0.7rem;
+    margin-top: 40px;
+    border-top: 2px solid white;
+    padding-top: 30px; }
+    footer .legal a {
+      color: white; }
+      footer .legal a:hover {
+        text-decoration: none; }

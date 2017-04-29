@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html>
   <head>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
@@ -11,11 +11,12 @@
     <title>Optical and Ultrasonic Imaging Laboratory</title>
     <link rel="icon" type="image/png" href="img/tabUB.png"/>
   </head>
-  <body>
+  <body data-spy="scroll" data-target="#sidebar" data-offset="200">
     <header>
-      <div class="wrapper"> <img class="headerLogo" src="img/headerUB.png" alt="Nada"/></div>
+      <div class="wrapper"> <a href="http://buffalo.edu"><img class="headerLogo" src="img/headerUB.png" alt="State University of New York, University at Buffalo"/></a></div>
     </header>
     <h1 class="page-title">Optical & Ultrasonic Imaging Laboratory</h1>
+    <div id="hamburger"><span></span><span></span><span></span><span></span></div>
     <nav>
       <div class="wrapper">
         <ul class="nav nav-tabs">
@@ -37,7 +38,7 @@
               <h3>Deep Tissue Photoacoustic Computed Tomography with a Fast and Compact Laser System</h3>
               <div class="content"><img class="research" src="img/research/r10_img.png"/>
                 <p class="text-justify">Photoacoustic computed tomography (PACT) holds great promise for biomedical imaging, but wide-spread implementation is impeded by the bulkiness of flash-lamp-pumped laser systems, which typically weigh between 50 - 200 kg, require continuous water cooling, and operate at a low repetition rate. Here, we demonstrate that compact lasers based on emerging diode technologies are well-suited for preclinical and clinical PACT. The diode-pumped laser used in this study had a miniature footprint (13×14×7cm<sup>3</sup>), weighed only 1.6 kg, and outputted up to 80 mJ per pulse at 1064 nm. In vitro, the laser system readily provided over 4 cm PACT depth in chicken breast tissue. In vivo, in addition to high resolution, non-invasive brain imaging in living mice, the system can operate at 50 Hz, which enabled high-speed cross-sectional imaging of murine cardiac and respiratory function. The system also provided high quality, high-frame rate, and non-invasive three-dimensional mapping of arm, palm, and breast vasculature at multi centimeter depths in living human subjects, demonstrating the clinical viability of compact lasers for PACT. </p>
-                <p>Depeng Wang, Yuehang Wang, Weiran Wang, Dandan Luo, Upendra Chitgupi, Jumin Geng, Yang Zhou, Lidai Wang, Jonathan F Lovell, and Jun Xia, <a href="https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-8-1-112&amp;id=355877">Deep tissue photoacoustic computed tomography with a fast and compact laser system</a>, Biomed. Opt. Express 8, 112-123 (2017)</p>
+                <p><a href="https://www.osapublishing.org/boe/fulltext.cfm?uri=boe-8-1-112&amp;id=355877">Depeng Wang, Yuehang Wang, Weiran Wang, Dandan Luo, Upendra Chitgupi, Jumin Geng, Yang Zhou, Lidai Wang, Jonathan F Lovell, and Jun Xia, Deep tissue photoacoustic computed tomography with a fast and compact laser system, Biomed. Opt. Express 8, 112-123 (2017)</a></p>
               </div>
             </article>
             <article class="row" id="article9">
@@ -123,8 +124,8 @@
           </div>
           <div class="col-md-3 col-sm-12">
             <div id="sidebar" data-spy="affix">
-              <ul class="sticky">
-                <li><a href="#article10">Deep Tissue Photoacoustic Computed Tomography with a Fast and Compact Laser System</a></li>
+              <ul class="sticky nav navbar-nav">
+                <li class="active" id="elevator-button"><a href="#article10">Deep Tissue Photoacoustic Computed Tomography with a Fast and Compact Laser System</a></li>
                 <li><a href="#article9">Coherent-Weighted 3D Image Reconstruction in Linear-array-based Photoacoustic Tomography</a></li>
                 <li><a href="#article8">A Phosphorus Phthalocyanine Formulation with Intense Absorbance at 1000nm for Deep Optical Imaging</a></li>
                 <li><a href="#article7">Slit-enabled Linear-array PAT with Near Isotropic Spatial Resolution in Three Dimension</a></li>
@@ -142,10 +143,16 @@
       </div>
     </div>
     <footer>
-      <div class="wrapper"><img class="footerLogo" src="img/footerBME.png" alt="Nada"/>
+      <div class="wrapper">
+        <div class="footerLogo"><a href="https://engineering.buffalo.edu/content/seas/biomedical.html"><img src="img/footerBME.png" alt="University at Buffalo, Department of Biomedical Engineering, Jacobs School of Medicine and Biomedical Sciences, School of Engineering and Applied Sciences"/></a></div>
         <address>OPTICAL & ULTRASONIC IMAGING LABORATORY<br/>208 Bonner Hall<br/>University at Buffalo, North Campus<br/>Buffalo, NY 14260 <br/>(716) 645-9126</address>
+        <div class="legal"> 
+          <p>The University at Buffalo is committed to ensuring equal access to its programs and activities. <a href="http://www.buffalo.edu/equity.html">View UB’s entire notice of non-discrimination</a>.</p>
+          <p>© 2017 <a href="http://buffalo.edu">University at Buffalo</a>. All rights reserved. | <a href="http://www.buffalo.edu/ubit/policies/it-policies-a-to-z/privacy.html">Privacy</a> | <a href="https://www.buffalo.edu/home/accessibility.html">Accessibility</a></p>
+        </div>
       </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/research.js"></script>
   </body>
 </html>
