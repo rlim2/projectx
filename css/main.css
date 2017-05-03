@@ -163,7 +163,7 @@ header {
 
 #mycarousel {
   position: relative;
-  height: 250px;
+  height: 200px;
   overflow: hidden; }
   #mycarousel img {
     min-height: 100%;
