@@ -20,10 +20,16 @@ h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: #005bbb; }
 
-h2.name, h3.name {
+h2.name, h3.name, h4.name {
   color: black;
   font-family: 'Arial', sans-serif;
   font-weight: normal; }
+
+h4.morespace {
+  margin-top: 25px; }
+
+.bottomspace {
+  margin-bottom: 20px; }
 
 .wrapper {
   max-width: 960px;
@@ -45,33 +51,42 @@ header {
 .page-title {
   text-align: center;
   font-size: 40px;
-  margin: 40px 0 40px 0; }
+  padding: 40px 0 40px 0;
+  margin: 0;
+  background: white;
+  position: relative;
+  z-index: 1; }
 
 .main .wrapper {
-  padding-top: 35px;
+  padding-top: 25px;
   padding-bottom: 80px; }
 
 .main .row {
-  padding: 50px 0; }
-  .main .row:first-child {
-    padding: 0; }
+  padding: 50px 0;
+  padding-top: 0; }
 
 .main .centerWrap {
   margin: 0 auto;
   float: none; }
 
+@media screen and (max-width: 768px) {
+  .main .wrapper .row div:not(:first-of-type) {
+    margin-top: 60px; } }
+
 #hamburger {
   width: 30px;
   height: 23px;
-  position: relative;
-  right: 0;
-  cursor: pointer; }
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  cursor: pointer;
+  z-index: 1; }
   #hamburger span {
     display: block;
     position: absolute;
-    height: 5px;
+    height: 3px;
     width: 100%;
-    background: #666666;
+    background: white;
     border-radius: 5px;
     opacity: 1;
     left: 0;
@@ -79,7 +94,7 @@ header {
     #hamburger span:nth-child(1) {
       top: 0; }
     #hamburger span:nth-child(2), #hamburger span:nth-child(3) {
-      top: 9px; }
+      top: 10px; }
     #hamburger span:nth-child(4) {
       bottom: 0; }
   #hamburger.open span:nth-child(1) {
@@ -98,27 +113,64 @@ header {
     #hamburger {
       display: none; } }
 
-.nav.nav-tabs {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  width: auto;
-  font-size: 1rem; }
-  .nav.nav-tabs li a:hover, .nav.nav-tabs li a.active {
-    background: #005bbb;
-    color: white; }
+#nav {
+  background: #f1f1f1;
+  position: relative; }
+  #nav::after, #nav::before {
+    content: '';
+    width: 100%;
+    height: 5px;
+    position: absolute; }
+  #nav::after {
+    bottom: 0;
+    box-shadow: 0 -10px 10px -10px black inset; }
+  #nav::before {
+    top: 0px;
+    box-shadow: 0 10px 10px -10px black inset; }
+  #nav .nav.nav-tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1rem;
+    border-bottom: none;
+    visibility: hidden;
+    height: 0;
+    opacity: 0;
+    transition: all .3s ease; }
+    #nav .nav.nav-tabs li a:hover, #nav .nav.nav-tabs li a.active {
+      background: #005bbb;
+      color: white; }
+  #nav.open {
+    padding: 20px 0; }
+    #nav.open .nav.nav-tabs {
+      width: 90%;
+      visibility: visible;
+      height: 300px;
+      opacity: 1; }
   @media screen and (min-width: 768px) {
-    .nav.nav-tabs {
-      flex-direction: row; } }
+    #nav {
+      background: none;
+      border: none; }
+      #nav::after, #nav::before {
+        content: none; }
+      #nav .wrapper .nav.nav-tabs {
+        flex-direction: row;
+        width: auto;
+        visibility: visible;
+        height: 50px;
+        opacity: 1;
+        border-bottom: 1px solid #dddddd; } }
 
 #mycarousel {
-  position: relative; }
+  position: relative;
+  height: 250px;
+  overflow: hidden; }
   #mycarousel img {
-    width: 100vw;
-    height: 60vh; }
+    min-height: 100%;
+    min-width: 100%; }
   #mycarousel #prev, #mycarousel #next {
     position: absolute;
-    top: 42.5%;
+    top: 35%;
     border-bottom: none; }
     #mycarousel #prev:hover, #mycarousel #next:hover {
       border-bottom: none; }
@@ -131,8 +183,14 @@ header {
     #mycarousel #next:active i {
       transform: translateX(2px); }
   #mycarousel i.material-icons {
-    font-size: 10rem;
+    font-size: 5rem;
     color: white; }
+    @media screen and (min-width: 768px) {
+      #mycarousel i.material-icons {
+        font-size: 10rem; } }
+  @media screen and (min-width: 768px) {
+    #mycarousel {
+      height: 60vh; } }
 
 .center-block {
   max-width: 120px;
@@ -192,10 +250,10 @@ header {
     margin: 0;
     margin-left: 10px; }
 
-ol {
+#publications ol {
   transform: rotate(180deg);
   margin-left: 20px; }
-  ol li {
+  #publications ol li {
     margin: 5px 0;
     transform: rotate(-180deg); }
 
