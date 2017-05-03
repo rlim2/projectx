@@ -42,6 +42,12 @@ h4.morespace
   margin: 0 auto
   padding: 0 20px
 
+img.img-responsive
+  margin: 0 auto
+  padding: 4px
+  border: 1px solid #ddd
+
+
 header, footer
   background: $ub-blue
   color: white
@@ -73,7 +79,7 @@ header
     float: none
     // width: 70%
 
-@media screen and (max-width: $bp-medium)
+@media screen and (max-width: calc($bp-medium - 1))
   .main .wrapper .row
     div:not(:first-of-type)
       margin-top: 60px
@@ -193,7 +199,7 @@ header
     @media screen and (min-width: $bp-medium)
       font-size: 10rem
   @media screen and (min-width: $bp-medium)
-    height: 60vh
+    height: 65vh
 
 
 
@@ -216,7 +222,7 @@ header
       padding: 20px
 #sidebar
   display: none
-  @media screen and (min-width: $bp-medium)
+  @media screen and (min-width: $bp-xlarge)
     display: block
     width: 250px
     background: white
