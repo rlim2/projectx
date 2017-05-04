@@ -10,6 +10,7 @@ $('#sidebar').affix({
 });
 
 $(window).ready(function() {
+  console.log('Built with love by awesome people:\nRachel (rlim2@buffalo.edu)\nDarren (zhanhuil@buffalo.edu)');
   $('#hamburger').click(function() {
     if ($(this).hasClass('open')) {
       $(this).removeClass('open');

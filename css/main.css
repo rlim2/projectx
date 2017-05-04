@@ -51,10 +51,9 @@ header {
     float: left;
     max-width: 236px;
     padding-top: 20px; }
-
-@media screen and (min-width: 768px) {
-  .wrapper .headerLogo img {
-    max-width: 400px; } }
+  @media screen and (min-width: 768px) {
+    header .wrapper img.headerLogo {
+      max-width: 300px; } }
 
 .page-title {
   text-align: center;
@@ -77,7 +76,7 @@ header {
   margin: 0 auto;
   float: none; }
 
-@media screen and (max-width: calc($bp-medium - 1)) {
+@media screen and (max-width: 767px) {
   .main .wrapper .row div:not(:first-of-type) {
     margin-top: 60px; } }
 
