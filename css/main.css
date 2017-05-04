@@ -47,11 +47,14 @@ header, footer {
 
 header {
   height: 60px; }
+  header .headerLogo {
+    float: left;
+    max-width: 236px;
+    padding-top: 20px; }
 
-.headerLogo {
-  float: left;
-  max-width: 300px;
-  padding-top: 20px; }
+@media screen and (min-width: 768px) {
+  .wrapper .headerLogo img {
+    max-width: 400px; } }
 
 .page-title {
   text-align: center;
@@ -281,7 +284,9 @@ footer {
       height: 80px; }
     footer address {
       margin-top: 25px;
-      margin-left: 68px; } }
+      margin-left: 68px; }
+    footer .wrapper .headerLogo img {
+      max-width: 150px; } }
   footer .legal {
     text-align: right;
     font-size: 0.7rem;
